@@ -1,8 +1,18 @@
-const url = "https://wizard-world-api.herokuapp.com/Houses/0367baf3-1cb6-4baf-bede-48e17e1cd005";
+const queryString = document.location.search;
 
-const resultsContainer = document.querySelector(".results");
+const params = new URLSearchParams(queryString);
 
-async function callApi(){
+const id = params.get("id");
+
+if (id === null) {
+	location.href = "/";
+}
+
+const detailUrl = "https://wizard-world-api.herokuapp.com/Houses/" + id;
+
+const detailContainer = document.querySelector(".details");
+
+async function fetchDetails(){
 
         try {
         const response = await fetch(url);
@@ -11,31 +21,18 @@ async function callApi(){
 
         console.log(details);
 
-        const houses = json;
-
         createHtml(details);
 
-        resultsContainer.innerHTML += "Houses";
-
-        for (let i =0; i < houses.length; i++) {
-
-        resultsContainer.innerHTML += `<div class="card">
-        <h4>${houses[i].name}</h4>
-    </div>`;
-        }
-        } catch (error) {
-                console.log(error);
-                resultsContainer.innerHTML = ("error", error);
-        }
-
+    } catch (error) {
+        console.log(error);
+        resultsContainer.innerHTML = ("error", error);
+}
 }
 
-callApi(url);
+fetchDetails();
 
 function createHtml(details) {
-    container.innerHTML = `<h1>${details.name}</h1>
-                            <div class="details-image" 
-                                    style="background-image: url('${details.background_image}')"></div>
-                                <div class="details-description">${details.description}</div>
-                                <time class="details-date">Released: ${details.released}</time>`;
-}
+    detailContainer.innerHTML = `<h4>${details.name}</h4>
+        <div class="details">${details.animal}</div>
+        <div class="details">Released: ${details.element}</div>
+        <div class="details">Released: ${details.founder}</div>`;}

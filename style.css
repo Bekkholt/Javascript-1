@@ -3,44 +3,44 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-h1 {
+/* h1 {
     margin-left: 1rem;
-}
+} */
 
-.container {
+/* .container {
     max-width: 1100px;
     margin: 0 auto;
-}
+} */
 
 .results {
     display: flex;
     flex-wrap: wrap;
 }
 
-.result {
+/* .result {
     margin: 1rem;
     padding: 1rem;
     max-width: 200px;
     background: white;
     border: 1px solid grey;
     border-radius: 1rem;
-}
+} */
 
-.success {
+/* .success {
     border: 1px solid rgb(114, 251, 114);
     padding: 1rem;
     color: rgb(114, 251, 114);
     background: rgba(0, 255, 0, 0.1);
-}
+} */
 
-.error {
+/* .error {
     border: 1px solid darkred;
     padding: 1rem;
     color: darkred;
     background: rgba(255, 0, 0, 0.1);
-}
+} */
 
-.loader {
+/* .loader {
     border: 16px solid #bffff9;
     border-top: 16px solid rgb(0, 83, 139);
     border-radius: 50%;
@@ -48,13 +48,19 @@ h1 {
     height: 120px;
     margin-left: 50%;
     animation: spin 2s linear infinite;
-}
+} */
 
 .card {
     width: 120px;
     border: 3px;
-    border-color: rgb(151, 72, 72);
     border-style: groove;
-    border-radius: 10%;
+    border-radius: 5%;
     margin: auto;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(151, 72, 72);
+}
+
+.details {
+    color: rgb(151, 72, 72);
 }

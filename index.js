@@ -13,13 +13,13 @@ async function callApi(){
 
         const houses = json;
 
-        resultsContainer.innerHTML += "Houses";
+        resultsContainer.innerHTML += "Houses:";
 
         for (let i =0; i < houses.length; i++) {
 
-        resultsContainer.innerHTML += `<div class="card">
+        resultsContainer.innerHTML += `<a class="card" href="details.html"
         <h4>${houses[i].name}</h4>
-    </div>`;
+    </a>`;
         }
         } catch (error) {
                 console.log(error);
