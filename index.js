@@ -24,8 +24,8 @@ async function callApi(){
                                                 </a>`;
             });
         } catch (error) {
-                console.log(error);
-                resultsContainer.innerHTML = ("error", error);
+                console.log("Error");
+                resultsContainer.innerHTML = message("An error occurred");
         }
 
 }

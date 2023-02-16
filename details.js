@@ -8,9 +8,9 @@ const id = params.get("id");
 
 console.log(id);
 
-// if (id === null) {
-// location.href = "/";
-// }
+if (id === null) {
+location.href = "/";
+}
 
 const detailUrl = "https://wizard-world-api.herokuapp.com/Houses/" + id;
 
@@ -35,8 +35,10 @@ async function fetchDetails(){
 
 fetchDetails();
 
+
+
 function createHtml(details) {
-    detailContainer.innerHTML = `<h4>${details.name}</h4>
-        <div class="details">${details.animal}</div>
-        <div class="details">Released: ${details.element}</div>
-        <div class="details">Released: ${details.founder}</div>`;}
+    detailContainer.innerHTML = `<h3>${details.name}</h3>
+        <div class="details">House founder: ${details.founder}</div>
+        <div class="details">House ghost: ${details.ghost}</div>
+        <div class="details">House commonroom: ${details.commonRoom}</div>`;}
