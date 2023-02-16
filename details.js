@@ -1,8 +1,12 @@
+const detailContainer = document.querySelector(".details");
+
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
+
+console.log(id);
 
 // if (id === null) {
 // location.href = "/";
@@ -10,7 +14,7 @@ const id = params.get("id");
 
 const detailUrl = "https://wizard-world-api.herokuapp.com/Houses/" + id;
 
-const detailContainer = document.querySelector(".details");
+console.log(detailUrl);
 
 async function fetchDetails(){
 
@@ -26,10 +30,10 @@ async function fetchDetails(){
     } catch (error) {
         console.log(error);
         detailContainer.innerHTML = ("error", error);
-}
+    }
 }
 
-fetchDetails(detailUrl);
+fetchDetails();
 
 function createHtml(details) {
     detailContainer.innerHTML = `<h4>${details.name}</h4>

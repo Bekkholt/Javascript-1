@@ -15,12 +15,14 @@ async function callApi(){
 
         resultsContainer.innerHTML += "Houses:";
 
-        for (let i =0; i < houses.length; i++) {
-
-        resultsContainer.innerHTML += `<a class="card" href="details.html"
-        <h4>${houses[i].name}</h4>
-    </a>`;
-        }
+        houses.forEach(function(house) {
+                resultsContainer.innerHTML += `<a href="details.html?id=${house.id}" class="card">
+                                                        <h3 class="name">${house.name}</h3>
+                                                        <p class="properties">${house.animal}</p>
+                                                        <p class="properties">${house.houseColours}</p>
+                                                        <p class="properties">${house.element}</p>
+                                                </a>`;
+            });
         } catch (error) {
                 console.log(error);
                 resultsContainer.innerHTML = ("error", error);
