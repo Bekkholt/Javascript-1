@@ -23,6 +23,8 @@ body {
     padding: 1rem;
     color: var(--dark-red) ;
     background: var(--almost-black);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .error:after {
