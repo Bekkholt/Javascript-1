@@ -1,5 +1,15 @@
+:root {
+    --background: #e5bcf8;
+    --main: rgb(151, 72, 72);
+    --red: rgb(255, 0, 0);
+    --dark-red: rgb(139, 0, 0);
+    --almost-black: rgba(249, 0, 0, 0.1);
+    --black: #010101;
+    --light-blue: #c5dbfe;
+}
+
 body {
-    background: #ebebeb;
+    background: var(--background);
     font-family: "Open Sans", sans-serif;
 }
 
@@ -9,10 +19,10 @@ body {
 }
 
 .error {
-    border: 2px solid rgb(255, 0, 0);
+    border: 2px solid var(--red);
     padding: 1rem;
-    color: darkred;
-    background: rgba(249, 0, 0, 0.1);
+    color: var(--dark-red) ;
+    background: var(--almost-black);
 }
 
 .error:after {
@@ -20,8 +30,8 @@ body {
 }
 
 .loader {
-    border: 16px solid rgb(151, 72, 72);
-    border-top: 16px solid rgba(249, 0, 0, 0.1);
+    border: 16px solid var(--main);
+    border-top: 16px solid var(--almost-black);
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -38,20 +48,21 @@ body {
     margin: auto;
     list-style: none;
     text-decoration: none;
-    color: rgb(151, 72, 72);
+    color: var(--main);
 }
 
 .details {
-    color: rgb(151, 72, 72);
+    color: var(--main);
+    font-size: large;
 }
 
 .properties {
-    color: #010101;
+    color: var(--black);
 }
 
 .card:hover {
-    background-color:#c5dbfe;
-    color: #010101;
+    background-color:var(--light-blue);
+    color: var(--black);
 }
 
 @keyframes spin {
