@@ -3,63 +3,32 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-/* h1 {
-    margin-left: 1rem;
-} */
-
-/* .container {
-    max-width: 1100px;
-    margin: 0 auto;
-} */
-
 .results {
     display: flex;
     flex-wrap: wrap;
 }
 
-/* .result {
-    margin: 1rem;
-    padding: 1rem;
-    max-width: 200px;
-    background: white;
-    border: 1px solid grey;
-    border-radius: 1rem;
-} */
-
-/* .success {
-    border: 1px solid rgb(114, 251, 114);
-    padding: 1rem;
-    color: rgb(114, 251, 114);
-    background: rgba(0, 255, 0, 0.1);
-} */
-
-/* .error {
-    border: 1px solid darkred;
+.error {
+    border: 2px solid rgb(255, 0, 0);
     padding: 1rem;
     color: darkred;
-    background: rgba(255, 0, 0, 0.1);
-} */
-
-.error {
-    border: 1px solid var(--primary-colour);
-    color: var(--primary-colour);
-    background: var(--light-grey);
-    padding: 1em;
+    background: rgba(249, 0, 0, 0.1);
 }
 
 .error:after {
     content: "An error occurred.";
 }
 
-/* .loader {
-    border: 16px solid #bffff9;
-    border-top: 16px solid rgb(0, 83, 139);
+.loader {
+    border: 16px solid rgb(151, 72, 72);
+    border-top: 16px solid rgba(249, 0, 0, 0.1);
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-left: 50%;
-    animation: spin 2s linear infinite;
-} */
+    animation: spin 4s linear infinite;
+    display: visible;
+}
 
 .card {
     width: 120px;

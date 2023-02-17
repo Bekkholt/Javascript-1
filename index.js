@@ -5,6 +5,9 @@ const resultsContainer = document.querySelector(".results");
 async function callApi(){
 
         try {
+
+        resultsContainer.innerHTML += `<div class="loader"></div>`
+
         const response = await fetch(url);
 
         const json = await response.json();
@@ -13,7 +16,7 @@ async function callApi(){
 
         const houses = json;
 
-        resultsContainer.innerHTML += "Houses:";
+        resultsContainer.innerHTML = "Houses:";
 
         houses.forEach(function(house) {
                 resultsContainer.innerHTML += `<a href="details.html?id=${house.id}" class="card">
@@ -24,10 +27,9 @@ async function callApi(){
                                                 </a>`;
             });
         } catch (error) {
-                console.log("Error");
-                resultsContainer.innerHTML = message("An error occurred");
+                console.log(error);
+                resultsContainer.innerHTML = message("error", error);
+            }
         }
-
-}
 
 callApi(url);

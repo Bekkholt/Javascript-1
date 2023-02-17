@@ -1,3 +1,3 @@
-function message(message = "Error") {
-    return `<div class="error" ${messageType}">${message}</div>`;
+function message(messageType = "error") {
+    return `<div class="error ${messageType}"></div>`;
 }

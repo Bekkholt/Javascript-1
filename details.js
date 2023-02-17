@@ -4,13 +4,7 @@ const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
-const id = params.get("id");
-
-console.log(id);
-
-if (id === null) {
-location.href = "/";
-}
+let id = params.get("id");
 
 const detailUrl = "https://wizard-world-api.herokuapp.com/Houses/" + id;
 
@@ -18,7 +12,8 @@ console.log(detailUrl);
 
 async function fetchDetails(){
 
-        try {
+    try {
+        detailContainer.innerHTML = `<div class="loader"></div>`
         const response = await fetch(detailUrl);
 
         const details = await response.json();
@@ -29,7 +24,7 @@ async function fetchDetails(){
 
     } catch (error) {
         console.log(error);
-        detailContainer.innerHTML = ("error", error);
+        resultsContainer.innerHTML = message("error", error);
     }
 }
 
