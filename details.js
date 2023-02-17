@@ -30,8 +30,6 @@ async function fetchDetails(){
 
 fetchDetails();
 
-
-
 function createHtml(details) {
     detailContainer.innerHTML = `<h3>${details.name}</h3>
         <div class="details">House founder: ${details.founder}</div>
