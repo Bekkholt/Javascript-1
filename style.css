@@ -63,7 +63,7 @@ body {
     color: var(--black);
 }
 
-.card:hover {
+.card:hover, button:hover {
     background-color:var(--light-blue);
     color: var(--black);
 }
@@ -75,13 +75,22 @@ form {
     color: var(--main);
 }
 
+input {
+    width: 100%;
+    margin-top: 1px;
+    padding: 5px;
+}
+
 ul {
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 button {
     background: var(--main);
-    color: var(--light-blue);
+    color: whitesmoke;
     cursor:pointer;
     width: 170px;
     margin-top: 10px;
@@ -95,4 +104,12 @@ button {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.message {
+    background: var(--main);
+    padding: 1rem;
+    color: var(--light-blue);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
