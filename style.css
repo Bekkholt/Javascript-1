@@ -79,6 +79,15 @@ ul {
     list-style: none;
 }
 
+button {
+    background: var(--main);
+    color: var(--light-blue);
+    cursor:pointer;
+    width: 170px;
+    margin-top: 10px;
+    padding: 1rem;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
