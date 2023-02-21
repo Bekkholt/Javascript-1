@@ -6,27 +6,13 @@ const address = document.querySelector("#address");
 const message = document.querySelector("#message")
 const button = document.querySelector("button");
 
-function checkLength(value, len) {
-    if (value.trim().length >= len) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-function validateEmail(email) {
-    const regEx = /\S+@\S+\.\S+/;
-    const patternMatches = regEx.test(email);
-    return patternMatches;
-}
-
 function validateForm(event) {
     event.preventDefault();
 
     if (checkLength(fullName.value, 1) === false) {
         message.innerHTML += `<div class="message">Name required</div>`;
     } else {
-        message.innerHTML.display = "none";
+        message.innerHTML = "";
     }
 
     if (checkLength(subject.value, 10) === false) {
@@ -46,6 +32,29 @@ function validateForm(event) {
     } else {
         message.innerHTML.display = "none";
     }
+
 }
 
-form.addEventListener("submit", validateForm);
+function submitForm(event) {
+    event.preventDefault(); {
+    message.innerHTML += '<div class="success">Success! Your info was submitted</div>';
+    form.reset();
+    }
+}
+
+form.addEventListener("submit", submitForm);
+
+function checkLength(value, len) {
+    if (value.trim().length >= len) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validateEmail(email) {
+    const regEx = /\S+@\S+\.\S+/;
+    const patternMatches = regEx.test(email);
+    return patternMatches;
+}
+
