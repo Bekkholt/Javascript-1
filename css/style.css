@@ -7,8 +7,11 @@
     --light-blue: #c5dbfe;
 }
 
+html {
+    background: url(https://images.unsplash.com/photo-1618944913553-303a9de0ade7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+}
+
 body {
-    background: var(--background);
     font-family: "Open Sans", sans-serif;
 }
 
@@ -55,13 +58,14 @@ h1 {
     margin: auto;
     text-decoration: none;
     color: var(--main);
+    background: #e3bcbc;
 }
 
 .details, .link {
     color: var(--main);
     font-size: large;
     text-decoration: none;
-    
+
 }
 
 .properties, .link:hover {
@@ -117,6 +121,18 @@ button {
     color: var(--black);
     border-radius: 1rem;
     margin-bottom: 1rem;
+}
+
+.container {
+    width: 300px;
+    border: 3px;
+    border-style: groove;
+    border-radius: 3%;
+    margin: auto;
+    padding: 3%;
+    text-decoration: none;
+    color: var(--main);
+    background: #e3bcbc;
 }
 
 @keyframes spin {
