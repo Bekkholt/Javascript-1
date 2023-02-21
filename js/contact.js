@@ -44,6 +44,7 @@ function submitForm(event) {
     message.innerHTML += '<div class="success">Success! Your info was submitted</div>';
         } else {
     form.input.reset();
+    form.message.reset();
         }
     }
 }
