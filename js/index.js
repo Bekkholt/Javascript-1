@@ -16,7 +16,7 @@ async function callApi(){
 
         const houses = json;
 
-        resultsContainer.innerHTML = "Houses:";
+        resultsContainer.innerHTML = "";
 
         houses.forEach(function(house) {
                 resultsContainer.innerHTML += `<a href="details.html?id=${house.id}" class="card">

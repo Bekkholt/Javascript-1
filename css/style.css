@@ -1,9 +1,8 @@
 :root {
-    --background: #e5bcf8;
+    --background: #e8c1fa;
     --main: rgb(151, 72, 72);
     --red: rgb(255, 0, 0);
     --dark-red: rgb(139, 0, 0);
-    --almost-black: rgba(249, 0, 0, 0.1);
     --black: #010101;
     --light-blue: #c5dbfe;
 }
@@ -11,6 +10,12 @@
 body {
     background: var(--background);
     font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--main);
 }
 
 .results {
@@ -22,7 +27,7 @@ body {
     border: 2px solid var(--red);
     padding: 1rem;
     color: var(--dark-red) ;
-    background: var(--almost-black);
+    background: rgba(249, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
 }
@@ -33,7 +38,7 @@ body {
 
 .loader {
     border: 16px solid var(--main);
-    border-top: 16px solid var(--almost-black);
+    border-top: 16px solid rgba(249, 0, 0, 0.1);
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -59,7 +64,7 @@ body {
     
 }
 
-.properties {
+.properties, .link:hover {
     color: var(--black);
 }
 
@@ -84,8 +89,8 @@ input {
 ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    font-weight: bolder;
 }
 
 button {
@@ -97,6 +102,23 @@ button {
     padding: 1rem;
 }
 
+.message {
+    background: var(--main);
+    padding: 1rem;
+    color: var(--light-blue);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: visible;
+}
+
+.success {
+    background: rgb(109, 173, 13);
+    padding: 1rem;
+    color: var(--black);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -104,12 +126,4 @@ button {
     100% {
         transform: rotate(360deg);
     }
-}
-
-.message {
-    background: var(--main);
-    padding: 1rem;
-    color: var(--light-blue);
-    border-radius: 1rem;
-    margin-bottom: 1rem;
 }
