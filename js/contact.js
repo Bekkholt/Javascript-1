@@ -43,7 +43,7 @@ function submitForm(event) {
         && checkLength(address.value, 25)) {
     message.innerHTML += '<div class="success">Success! Your info was submitted</div>';
         } else {
-    form.reset();
+    form.input.reset();
         }
     }
 }
