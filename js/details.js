@@ -25,7 +25,7 @@ fetchDetails();
 
 function createHtml(details) {
     detailContainer.innerHTML = `<h3>${details.name}</h3>
-        <div class="details">House founder: ${details.founder}</div>
-        <div class="details">House ghost: ${details.ghost}</div>
-        <div class="details">House commonroom: ${details.commonRoom}</div>`;
+        <div class="details founder">House founder: ${details.founder}</div>
+        <div class="details ghost">House ghost: ${details.ghost}</div>
+        <div class="details room">House commonroom: ${details.commonRoom}</div>`;
     }

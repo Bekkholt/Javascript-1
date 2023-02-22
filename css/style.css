@@ -139,6 +139,11 @@ button {
     background: #e3bcbc;
 }
 
+.founder, .ghost, .room {
+    font-style: italic;
+    color: var(--black);
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
