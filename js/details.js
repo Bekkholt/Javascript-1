@@ -8,8 +8,6 @@ let id = params.get("id");
 
 const detailUrl = "https://wizard-world-api.herokuapp.com/Houses/" + id;
 
-console.log(detailUrl);
-
 async function fetchDetails(){
     try {
         detailContainer.innerHTML = `<div class="loader"></div>`
@@ -17,11 +15,9 @@ async function fetchDetails(){
         const details = await response.json();
         
         document.title = details.name;
-        console.log(details);
         createHtml(details);
         
     } catch (error) {
-        console.log(error);
         detailContainer.innerHTML = message("error", error);
     }
 }

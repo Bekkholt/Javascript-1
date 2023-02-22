@@ -12,8 +12,6 @@ async function callApi(){
 
         const json = await response.json();
 
-        console.log(json);
-
         const houses = json;
 
         resultsContainer.innerHTML = "";
@@ -27,7 +25,6 @@ async function callApi(){
                                                 </a>`;
             });
         } catch (error) {
-                console.log(error);
                 resultsContainer.innerHTML = message("error", error);
             }
         }
