@@ -1,8 +1,7 @@
 :root {
-    --background: #e8c1fa;
     --main: rgb(151, 72, 72);
-    --red: rgb(255, 0, 0);
     --dark-red: rgb(139, 0, 0);
+    --darker-red: rgba(249, 0, 0, 0.1);
     --black: #010101;
     --light-blue: #c5dbfe;
 }
@@ -29,10 +28,10 @@ h1 {
 }
 
 .error {
-    border: 2px solid var(--red);
+    border: 2px solid rgb(255, 0, 0);
     padding: 1rem;
     color: var(--dark-red) ;
-    background: rgba(249, 0, 0, 0.1);
+    background: var(--darker-red);
     display: flex;
     flex-wrap: wrap;
 }
@@ -43,13 +42,14 @@ h1 {
 
 .loader {
     border: 16px solid var(--main);
-    border-top: 16px solid rgba(249, 0, 0, 0.1);
+    border-top: 16px solid;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     margin-left: 50%;
     animation: spin 4s linear infinite;
     display: visible;
+    color: var(--darker-red);
 }
 
 .card {
