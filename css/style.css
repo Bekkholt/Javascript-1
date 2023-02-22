@@ -106,26 +106,25 @@ button {
     background: var(--main);
     color: whitesmoke;
     cursor:pointer;
-    width: 170px;
+    width: 100px;
     margin-top: 10px;
-    padding: 1rem;
+    padding: 5px;
 }
 
 .message {
     background: var(--main);
-    padding: 1rem;
+    padding: 7px;
+    margin: 5px;
     color: var(--light-blue);
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    display: visible;
+    border-radius: 5px;
 }
 
 .success {
     background: rgb(109, 173, 13);
-    padding: 1rem;
+    padding: 7px;
+    margin: 5px;
     color: var(--black);
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+    border-radius: 5px;
 }
 
 .container {
