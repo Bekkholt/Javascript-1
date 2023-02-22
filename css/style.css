@@ -16,6 +16,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+nav {
+    background-color: #01010125;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -67,7 +71,6 @@ h1 {
     color: var(--main);
     font-size: large;
     text-decoration: none;
-
 }
 
 .properties, .link:hover {

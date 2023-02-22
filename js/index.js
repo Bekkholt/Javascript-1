@@ -1,15 +1,10 @@
 const url = "https://wizard-world-api.herokuapp.com/Houses";
-
 const resultsContainer = document.querySelector(".results");
 
 async function callApi(){
-
         try {
-
         resultsContainer.innerHTML += `<div class="loader"></div>`
-
         const response = await fetch(url);
-
         const json = await response.json();
 
         const houses = json;
@@ -23,10 +18,10 @@ async function callApi(){
                                                         <p class="properties">${house.houseColours}</p>
                                                         <p class="properties">${house.element}</p>
                                                 </a>`;
-            });
+                                        });
         } catch (error) {
                 resultsContainer.innerHTML = message("error", error);
-            }
         }
+}
 
 callApi(url);

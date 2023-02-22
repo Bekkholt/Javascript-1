@@ -1,7 +1,5 @@
 const detailContainer = document.querySelector(".details");
-
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
 
 let id = params.get("id");
@@ -15,6 +13,7 @@ async function fetchDetails(){
         const details = await response.json();
         
         document.title = details.name;
+
         createHtml(details);
         
     } catch (error) {
@@ -28,4 +27,5 @@ function createHtml(details) {
     detailContainer.innerHTML = `<h3>${details.name}</h3>
         <div class="details">House founder: ${details.founder}</div>
         <div class="details">House ghost: ${details.ghost}</div>
-        <div class="details">House commonroom: ${details.commonRoom}</div>`;}
+        <div class="details">House commonroom: ${details.commonRoom}</div>`;
+    }

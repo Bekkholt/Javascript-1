@@ -51,7 +51,7 @@ function submitForm(event) {
 
 form.addEventListener("submit", validateForm);
 
-form.addEventListener("submit", submitForm)
+form.addEventListener("submit", submitForm);
 
 function checkLength(value, len) {
     if (value.trim().length >= len) {
