@@ -71,6 +71,7 @@ h1 {
     color: var(--main);
     background: #e3bcbc;
     margin: 125px;
+    padding: 2px;
 }
 
 .details, .link {

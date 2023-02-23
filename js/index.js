@@ -14,9 +14,9 @@ async function callApi(){
         houses.forEach(function(house) {
                 resultsContainer.innerHTML += `<a href="details.html?id=${house.id}" class="card">
                                                         <h3 class="name">${house.name}</h3>
-                                                        <p class="properties">Animal: ${house.animal}</p>
-                                                        <p class="properties">Colours: ${house.houseColours}</p>
-                                                        <p class="properties"> Element: ${house.element}</p>
+                                                        <h5>Animal:</h5><p class="properties"> ${house.animal}</p>
+                                                        <h5>Colours:</h5><p class="properties"> ${house.houseColours}</p>
+                                                        <h5>Element:</h5><p class="properties"> ${house.element}</p>
                                                 </a>`;
                                         });
         } catch (error) {

@@ -24,8 +24,8 @@ async function fetchDetails(){
 fetchDetails();
 
 function createHtml(details) {
-    detailContainer.innerHTML = `<h3>${details.name}</h3>
-        <div class="details founder">House founder: ${details.founder}</div>
-        <div class="details ghost">House ghost: ${details.ghost}</div>
-        <div class="details room">House commonroom: ${details.commonRoom}</div>`;
+    detailContainer.innerHTML = `<h2>${details.name}</h2>
+    <h5>House founder:</h5><div class="details founder"> ${details.founder}</div>
+    <h5>House ghost:</h5><div class="details ghost"> ${details.ghost}</div>
+    <h5>House commonroom:</h5><div class="details room"> ${details.commonRoom}</div>`;
     }
