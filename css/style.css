@@ -1,6 +1,5 @@
 :root {
     --main: rgb(151, 72, 72);
-    --dark-red: rgb(139, 0, 0);
     --darker-red: rgba(249, 0, 0, 0.1);
     --black: #010101;
     --light-blue: #c5dbfe;
@@ -19,6 +18,11 @@ body {
 nav {
     background-color: #010101a5;
     padding: 5px;
+}
+
+.flexWrapper {
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
@@ -40,7 +44,7 @@ h1 {
 .error {
     border: 2px solid rgb(255, 0, 0);
     padding: 1rem;
-    color: var(--dark-red) ;
+    color: rgb(139, 0, 0);
     background: var(--darker-red);
     display: flex;
     flex-wrap: wrap;
@@ -51,14 +55,12 @@ h1 {
 }
 
 .loader {
-    border: 16px solid var(--main);
-    border-top: 16px solid;
+    border: 12px solid var(--main);
+    border-top: 12px solid;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    margin-left: 50%;
     animation: spin 4s linear infinite;
-    display: visible;
     color: var(--darker-red);
 }
 
@@ -79,7 +81,6 @@ h1 {
 }
 
 .details, .link {
-    color: var(--main);
     font-size: large;
     text-decoration: none;
 }
