@@ -20,7 +20,7 @@ nav {
     padding: 5px;
 }
 
-.flexWrapper {
+.content {
     display: flex;
     justify-content: center;
 }
