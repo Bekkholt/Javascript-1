@@ -34,6 +34,7 @@ h1 {
 .results {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .error {
@@ -71,7 +72,6 @@ h1 {
     color: var(--main);
     background: #e3bcbc;
     margin: 125px;
-    padding: 2px;
 }
 
 .details, .link {
@@ -143,7 +143,7 @@ button {
     border: 3px;
     border-style: groove;
     border-radius: 3%;
-    padding: 3%;
+    padding: 20px;
     margin-top: 50px;
     margin-left: 560px;
     text-decoration: none;
@@ -154,6 +154,14 @@ button {
 .founder, .ghost, .room {
     font-style: italic;
     color: var(--black);
+}
+
+h5 {
+    margin-bottom: 0;
+}
+
+.properties {
+    margin-top: 0;
 }
 
 @keyframes spin {
