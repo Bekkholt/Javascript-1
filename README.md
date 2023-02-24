@@ -13,6 +13,8 @@ https://scintillating-mooncake-f87671.netlify.app
 ## Further comments
 
 The overall design and styling is made quite simple, since I want the focus to be on the javascript.
+Background-image taken from Unsplashed:
+https://unsplash.com/photos/nO6YVJ_mxXc
 
 ## Author
 
