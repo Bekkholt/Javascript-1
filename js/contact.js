@@ -36,17 +36,17 @@ function validateForm(event) {
 }
 
 function submitForm(event) {
-    event.preventDefault(); {
-        if (checkLength(fullName.value, 1)
+    event.preventDefault(); 
+    if (checkLength(fullName.value, 1)
         && checkLength(subject.value, 10)
         && validateEmail(email.value)
         && checkLength(address.value, 25)) {
-    message.innerHTML += '<div class="success">Success! Your info was submitted</div>';
-        } else {
-    form.input.reset();
-    form.message.reset();
-        }
+        message.innerHTML += '<div class="success">Success! Your info was submitted</div>';
+    } else {
+        form.input.reset();
+        form.message.reset();
     }
+    
 }
 
 form.addEventListener("submit", validateForm);

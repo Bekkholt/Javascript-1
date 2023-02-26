@@ -10,6 +10,10 @@ I have used the Wizard World API, found in one of the lists that were linked to 
 
 https://scintillating-mooncake-f87671.netlify.app
 
+## API link
+
+https://wizard-world-api.herokuapp.com/swagger/index.html
+
 ## Further comments
 
 The overall design and styling is made quite simple, since I want the focus to be on the javascript.
